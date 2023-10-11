@@ -7,7 +7,7 @@ function App() {
   const [carts, setCarts] = useState([]);
   const [price, setPrice] = useState(0);
 
-  const handleAddToCart = (index, productId) => {
+  const handleAddProductToCart = (index, productId) => {
     const newCarts = [...carts];
     const productExist = newCarts.some((product) => product.id === productId);
 
@@ -21,13 +21,13 @@ function App() {
     }
   };
 
-  const handleDeleteFromCart = (index) => {
+  const handleDeleteProductFromCart = (index) => {
     const newCarts = [...carts];
     newCarts.splice(index, 1);
     setCarts(newCarts);
   };
 
-  const handleIncrease = (productId) => {
+  const handleIncreaseProductQuantity = (productId) => {
     const newCarts = [...carts];
     const findProduct = newCarts.find((product) => product.id === productId);
     if (findProduct.quantity >= 0) {
@@ -36,7 +36,7 @@ function App() {
     setCarts(newCarts);
   };
 
-  const handleDecrease = (productId, index) => {
+  const handleDecreaseProductQuantity = (productId, index) => {
     const newCarts = [...carts];
     const findProduct = newCarts.find((product) => product.id === productId);
     if (findProduct.quantity > 1) {
@@ -65,7 +65,7 @@ function App() {
               <img src={product.image} alt="sample name" />
               <h2>{product.name}</h2>
               <p>{product.description}</p>
-              <button onClick={() => handleAddToCart(index, product.id)}>
+              <button onClick={() => handleAddProductToCart(index, product.id)}>
                 Add to cart
               </button>
             </div>
@@ -84,20 +84,20 @@ function App() {
               <h2>Quantity: {cart.quantity}</h2>
               <button
                 className="delete-button"
-                onClick={() => handleDeleteFromCart(index)}
+                onClick={() => handleDeleteProductFromCart(index)}
               >
                 x
               </button>
               <div className="quantity-actions">
                 <button
                   className="add-quantity"
-                  onClick={() => handleIncrease(cart.id)}
+                  onClick={() => handleIncreaseProductQuantity(cart.id)}
                 >
                   +
                 </button>
                 <button
                   className="subtract-quantity"
-                  onClick={() => handleDecrease(cart.id, index)}
+                  onClick={() => handleDecreaseProductQuantity(cart.id, index)}
                 >
                   -
                 </button>
