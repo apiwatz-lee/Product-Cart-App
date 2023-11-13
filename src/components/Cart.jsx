@@ -67,7 +67,7 @@ const Cart = ({
       </div>
       <h1 className="font-bold text-white mb-10 text-center text-3xl mt-5">
         Total Price is
-        <span className="text-8xl text-amber-500 mx-10">
+        <span className="sm:text-5xl md:text-8xl lg:text-8xl xl:text-8xl text-amber-500 mx-10">
           {formatNumber(price)}
         </span>
         Baht
