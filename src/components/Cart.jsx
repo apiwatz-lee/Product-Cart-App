@@ -1,4 +1,5 @@
 import React from "react";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Cart = ({
   formatNumber,
@@ -9,9 +10,9 @@ const Cart = ({
   price,
 }) => {
   return (
-    <section className="cart w-screen p-10">
-      <h1 className="text-3xl font-bold text-white mb-10">
-        Cart (Total Price is {formatNumber(price)} Baht)
+    <section className="cart w-screen p-10 mt-2">
+      <h1 className="font-bold text-white mb-10 text-center text-5xl flex justify-center gap-4">
+        Cart <AiOutlineShoppingCart />
       </h1>
       <div className="flex flex-wrap">
         {carts.map((cart, index) => (
@@ -42,20 +43,20 @@ const Cart = ({
             </div>
 
             <button
-              className="text-white text-xl font-bold bg-slate-800 border-slate-600 flex justify-center items-center absolute right-[-30px] top-[-10px] rounded-full w-[50px] h-[50px] cursor-pointer"
+              className="text-white text-xl font-bold bg-slate-800 border-slate-600 flex justify-center items-center absolute right-[-30px] top-[-10px] rounded-full w-[50px] h-[50px] hover:bg-amber-700 duration-500 cursor-pointer"
               onClick={() => handleDeleteProductFromCart(index)}
             >
               x
             </button>
             <div className="flex mt-[20px] justify-evenly">
               <button
-                className="w-[150px] bg-slate-900 text-white rounded-md"
+                className="w-[150px] bg-slate-900 text-white rounded-md hover:bg-amber-700 hover:w-32 duration-500"
                 onClick={() => handleIncreaseProductQuantity(cart.id)}
               >
                 +
               </button>
               <button
-                className="w-[150px] bg-slate-900 text-white rounded-md"
+                className="w-[150px] bg-slate-900 text-white rounded-md hover:bg-amber-700 hover:w-32 duration-500"
                 onClick={() => handleDecreaseProductQuantity(cart.id, index)}
               >
                 -
@@ -64,6 +65,13 @@ const Cart = ({
           </div>
         ))}
       </div>
+      <h1 className="font-bold text-white mb-10 text-center text-3xl mt-5">
+        Total Price is
+        <span className="text-8xl text-amber-500 mx-10">
+          {formatNumber(price)}
+        </span>
+        Baht
+      </h1>
     </section>
   );
 };
