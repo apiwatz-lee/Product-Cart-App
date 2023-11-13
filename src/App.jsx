@@ -1,6 +1,8 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import products from "./data/product";
+import Product from "./components/product";
+import Cart from "./components/Cart";
 
 function App() {
   const [productLists, setProductLists] = useState(products);
@@ -55,57 +57,28 @@ function App() {
 
   useEffect(() => calculateAmount(), [carts]);
 
+  const formatNumber = (num) => {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+  };
+
   return (
-    <div className="App">
-      <section className="product-container">
-        <h1 className="product-heading">Products</h1>
-        <div className="product-list">
-          {productLists.map((product, index) => (
-            <div className="product" key={index}>
-              <img src={product.image} alt="sample name" />
-              <h2>{product.name}</h2>
-              <p>{product.description}</p>
-              <button onClick={() => handleAddProductToCart(index, product.id)}>
-                Add to cart
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
+    <div className=" flex flex-col justify-center items-center p-5 h-auto bg-gradient-to-br from-gray-900 to-gray-600 bg-gradient-to-r">
+      <Product
+        productLists={productLists}
+        formatNumber={formatNumber}
+        handleAddProductToCart={handleAddProductToCart}
+      />
+
       <hr />
 
-      <section className="cart">
-        <h1 className="cart-heading">Cart (Total Price is {price} Baht)</h1>
-        <div className="cart-item-list">
-          {carts.map((cart, index) => (
-            <div className="cart-item" key={index}>
-              <h1>Item name: {cart.name}</h1>
-              <h2>Price: {cart.price}</h2>
-              <h2>Quantity: {cart.quantity}</h2>
-              <button
-                className="delete-button"
-                onClick={() => handleDeleteProductFromCart(index)}
-              >
-                x
-              </button>
-              <div className="quantity-actions">
-                <button
-                  className="add-quantity"
-                  onClick={() => handleIncreaseProductQuantity(cart.id)}
-                >
-                  +
-                </button>
-                <button
-                  className="subtract-quantity"
-                  onClick={() => handleDecreaseProductQuantity(cart.id, index)}
-                >
-                  -
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Cart
+        formatNumber={formatNumber}
+        carts={carts}
+        handleDeleteProductFromCart={handleDeleteProductFromCart}
+        handleIncreaseProductQuantity={handleIncreaseProductQuantity}
+        handleDecreaseProductQuantity={handleDecreaseProductQuantity}
+        price={price}
+      />
     </div>
   );
 }

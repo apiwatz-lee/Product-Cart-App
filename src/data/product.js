@@ -1,77 +1,92 @@
 const products = [
   {
     id: 1,
-    name: "Fond - Neutral",
-    price: 100,
-    image: "http://dummyimage.com/350x350.png/dddddd/000000",
-    description: "Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+    name: "Nike Shoes",
+    price: 4500,
+    image:
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description:
+      "Step into style and comfort with our trendy casual sneakers. From classic to contemporary. ",
   },
   {
     id: 2,
-    name: "Pepper - Cubanelle",
-    price: 200,
-    image: "http://dummyimage.com/350x350.png/cc0000/ffffff",
-    description: "Nulla facilisi.",
+    name: "Uniqlo Clothes",
+    price: 450,
+    image:
+      "https://images.unsplash.com/photo-1613461920867-9ea115fee900?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description:
+      "Discover a fusion of minimalist design and exceptional quality in our clothing. ",
   },
   {
     id: 3,
-    name: "Cleaner - Pine Sol",
-    price: 300,
-    image: "http://dummyimage.com/350x350.png/cc0000/ffffff",
-    description: "Maecenas rhoncus aliquam lacus.",
+    name: "Owndays Glassess",
+    price: 2500,
+    image:
+      "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description:
+      "Elevate your look with our curated collection of glasses, where fashion meets functionality. ",
   },
   {
     id: 4,
-    name: "Wakami Seaweed",
-    price: 400,
-    image: "http://dummyimage.com/350x350.png/ff4444/ffffff",
-    description: "In hac habitasse platea dictumst.",
+    name: "Ikea cloth bags",
+    price: 250,
+    image:
+      "https://images.unsplash.com/photo-1628752660419-ad1c751abe72?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description:
+      "Step into sustainability with our chic cloth bags, where fashion meets conscience.",
   },
   {
     id: 5,
-    name: "Dried Figs",
-    price: 500,
-    image: "http://dummyimage.com/350x350.png/5fa2dd/ffffff",
+    name: "Apple Iphone15 ",
+    price: 48000,
+    image:
+      "https://images.unsplash.com/photo-1697120397972-cee0865a6fd6?q=80&w=2797&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+      "Experience the future of mobile technology where innovation meets sophistication. ",
   },
   {
     id: 6,
-    name: "Kohlrabi",
-    price: 600,
-    image: "http://dummyimage.com/350x350.png/5fa2dd/ffffff",
-    description: "Praesent blandit.",
+    name: "Keychron K4 Pro",
+    price: 5500,
+    image:
+      "https://images.unsplash.com/photo-1616933067445-4b556aa759c7?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description:
+      "A mechanical keyboard meticulously designed to redefine your typing experience.",
   },
   {
     id: 7,
-    name: "Kippers - Smoked",
-    price: 700,
-    image: "http://dummyimage.com/350x350.png/dddddd/000000",
-    description:
-      "Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede.",
+    name: "Marshall Stanmore",
+    price: 13900,
+    image:
+      "https://images.unsplash.com/photo-1613130338397-3aa779444c69?q=80&w=2835&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Experience audio excellence with the Marshall Urban Beat. ",
   },
   {
     id: 8,
-    name: "Wine - White, Ej Gallo",
+    name: "Apple Macbook M1",
     price: 800,
-    image: "http://dummyimage.com/350x350.png/ff4444/ffffff",
+    image:
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+      "Unleash your creativity with unparalleled performance, stunning visuals, and a sleek design.",
   },
   {
     id: 9,
-    name: "The Pop Shoppe - Grape",
-    price: 900,
-    image: "http://dummyimage.com/350x350.png/ff4444/ffffff",
-    description: "Nulla mollis molestie lorem. Quisque ut erat.",
+    name: "Orange Cat",
+    price: 20000,
+    image:
+      "https://images.unsplash.com/photo-1573865526739-10659fec78a5?q=80&w=2815&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description:
+      "Embrace the joy of having an Orange Cat as your loyal and loving companion",
   },
   {
     id: 10,
-    name: "Currants",
-    price: 1000,
-    image: "http://dummyimage.com/350x350.png/5fa2dd/ffffff",
+    name: "Golden Retriever",
+    price: 25000,
+    image:
+      "https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=2762&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.",
+      "Meet the Golden Harmony Retriever, where boundless joy meets a heart of gold. ",
   },
 ];
 
