@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import products from "./data/product";
-import Product from "./components/product";
+import Product from "./components/Product";
 import Cart from "./components/Cart";
 
 function App() {
